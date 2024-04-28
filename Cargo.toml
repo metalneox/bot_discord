@@ -1,0 +1,20 @@
+[package]
+name = "bot_discord"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+tokio = { version = "1.23.0", features = ["macros", "rt-multi-thread"] }
+#serenity = "0.11.5"
+serenity = { default-features = false, features = [
+  "client",
+  "gateway",
+  "model",
+  "rustls_backend",
+  "collector",
+], version = "0.11.5" }
+
+#TODO: Sostituire con github source
+featurebot = { path = "../featurebot" }
+#featurebot = { git = "https://github.com/metalneox/featurebot" }
